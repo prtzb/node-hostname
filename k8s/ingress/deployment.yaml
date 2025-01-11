@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: node-hostname
-        image: ghcr.io/prtzb/node-hostname/node-hostname:0.0.1
+        image: ghcr.io/prtzb/node-hostname/node-hostname:0.0.2
         ports:
         - containerPort: 3000
         env:
