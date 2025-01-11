@@ -1,0 +1,17 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: node-hostname-ingress
+  namespace: node-hostname
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - kind: Rule
+    match: Host(`node-hostname.stage.linnaeus.dev`)
+    services:
+    - name: node-hostname-service
+      port: 3000
+  tls:
+    secretName: node-hostname-cert-secret

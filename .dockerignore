@@ -2,3 +2,6 @@
 node_modules
 Dockerfile
 .dockerignore
+.terraform*
+*.tfstate*
+k8s
