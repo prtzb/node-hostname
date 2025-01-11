@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18-slim
+FROM node:23-slim
 
 # Set environment variables
 ENV NODE_ENV=production
