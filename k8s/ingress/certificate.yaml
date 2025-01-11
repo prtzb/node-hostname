@@ -1,0 +1,16 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: node-hostname-cert
+  namespace: node-hostname
+spec:
+  secretName: node-hostname-cert-secret
+  subject:
+    organizations:
+      - linnaeus
+  issuerRef:
+    name: cert-manager-clusterissuer
+    kind: ClusterIssuer
+  dnsNames:
+    - node-hostname.stage.linnaeus.dev
